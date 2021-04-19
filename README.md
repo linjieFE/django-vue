@@ -26,6 +26,7 @@ cd backend
  django-admin startapp blog
 ```
 * 添加blog的Model，并添加一些初始数据
+  
     1. 修改  `blog/models.py`
     2. 创建 model
     3. 修改 `backend/settings.py` 增加`blog` 再运行` python manage.py makemigrations`
@@ -47,6 +48,7 @@ cd backend
 
 * 使用 restframework 来添加 serializer, viwewset,urls
   - 官方文档[https://www.django-rest-framework.org/](rest-framework)
+  - 点这里快速开始 -> [官方文档](https://www.django-rest-framework.org/tutorial/quickstart/#views)
   1. 安装 `restframework` 到跟目录 第一层·backend· 下 `pip install djangorestframework`
   2. 修改 `backend/settings.py` 增加`rest_framework`
   3. blog 目录下 新建 `serializers.py`
@@ -86,5 +88,7 @@ cd backend
  - `vue create frontend`
  - `npm run serve`
 * 修改核心组件
+  - [bootstrap4](https://v4.bootcss.com/docs/getting-started/introduction/)
+  - [fontwasome 字体美化库](https://fontawesome.dashgame.com/)
 * 添加 axios http 请求组件
 * 添加 请求后组代码
