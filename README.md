@@ -42,6 +42,7 @@ cd backend
     
 
 * 使用 restframework 来添加 serializer, viwewset,urls
+  - 官方文档[https://www.django-rest-framework.org/](rest-framework)
   1. 安装 `restframework` 到跟目录 第一层·backend· 下 `pip install djangorestframework`
   2. 修改 `backend/settings.py` 增加`rest_framework`
   ```bash
