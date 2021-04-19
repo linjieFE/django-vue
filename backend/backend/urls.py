@@ -19,8 +19,8 @@ from rest_framework import routers
 from blog.views import BlogViewSet
 
 router = routers.DefaultRouter()
-router.register(BlogViewSet)
+router.register('blog/', BlogViewSet)
 
 urlpatterns = [
-    path('admin/', admin.site.urls),
+    path('api/', include(router.urls)),
 ]
