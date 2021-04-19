@@ -83,6 +83,8 @@ cd backend
 # 前端 
 * vue cli
  - `npm install @vue/cli -g`
+ - `vue create frontend`
+ - `npm run serve`
 * 修改核心组件
 * 添加 axios http 请求组件
 * 添加 请求后组代码
