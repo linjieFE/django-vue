@@ -38,19 +38,9 @@ cd backend
       ```
     4. 运行 `python manage.py migrate`
     5. 运行 `python manage.py shell` 终端 键入 `from blog.models import Blog`
-    6. 手动添加数据 `Blog.objects.create(title='b1',content='b1 content')`,`Blog.objects.all()`
-    
+    6. 手动添加数据 `Blog.objects.create(title='b1',content='b1 content')`
 
 * 使用 restframework 来添加 serializer, viwewset,urls
-  1. 安装 `restframework` 到跟目录 第一层·backend· 下 `pip install djangorestframework`
-  2. 修改 `backend/settings.py` 增加`rest_framework`
-  ```bash
-    INSTALLED_APPS = [
-      ...
-      'rest_framework'
-      'blog',
-    ]
-  ```
 * 设置 跨域 cors headers
 
 # 前端 
