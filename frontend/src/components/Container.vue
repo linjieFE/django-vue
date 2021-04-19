@@ -46,6 +46,7 @@
 </template>
 
 <script>
+import axios from 'axios';
 export default {
   name: 'Container',
   props: {
@@ -53,7 +54,8 @@ export default {
   },
   data(){
     return {
-      blog:null,
+      base_url:'http://127.0.0.1:8000/api/blog/',
+      blogs:[],
       url:'',
       title:'',
       content:'',
@@ -61,20 +63,43 @@ export default {
   },
   methods:{
     getAll(){
-
+      axios.get(this.base_url)
+      .then(res=>{
+        this.blogs=res.data;
+        this.url='';
+        this.title='';
+        this.content='';
+      })
     },
     saveBlog(){
-
+      //两种情况 1。新增 2。 修改
+      //通过url 是否为空判断 
+     if(this.url==''){
+       //新增
+       axios.post(this.base_url,{title:this.title,content:this.content}).then(()=>{
+         this.getAll()
+       })
+     }else{
+        //修改 因为要修改的url已经配置好了
+       axios.put(this.url,{title:this.title,content:this.content}).then(()=>{
+         this.getAll()
+       })
+     }
     },
-    editBlog(){
-
+    editBlog(blog){
+      this.url=blog.url;
+      this.title=blog.title;
+      this.content=blog.content;
     },
-    deleteBlog(){
-
+    deleteBlog(blog){
+      axios.delete(blog.url)
+      .then(()=>{
+        this.getAll()
+      })
     }
   },
   mounted(){
-
+    this.getAll()
   }
 }
 </script>
