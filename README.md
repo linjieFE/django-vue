@@ -91,4 +91,31 @@ cd backend
   - [bootstrap4](https://v4.bootcss.com/docs/getting-started/introduction/)
   - [fontwasome 字体美化库](https://fontawesome.dashgame.com/)
 * 添加 axios http 请求组件
+ - `npm install axios --save`
+    * 运行到这时的时候django 控制台抛了一个错 `cannot import name 'six' from 'django.utils'`
+      [解决方案](https://stackoverflow.com/questions/59193514/importerror-cannot-import-name-six-from-django-utils)
+      我在这时增加了`requirements.txt` 并运行`pip3 install -r requirements.txt` 把django版本降低到`Django==2.1.4`
+
 * 添加 请求后组代码
+## Root Folder Structure(具体的文件目录)
+
+```bash
+├── backend  # 后端
+│   ├── backend  # 后端
+│   │   ├── urls.py  # 页面url 和 接口url
+│   │   ├── setting.py  # 配置权限
+│   ├── blog  # 依赖包
+│   │   │   ├── apps.py  # 页机配置
+│   │   │   ├── models.py  # 复写setting.py 连接mySQL
+│   │   │   ├── views.py  # 处理python视图 和  http response 接口状态 和 结构返回 到 页面
+│   │   │   └── serializers.py  # 路由序列化
+│   │   │   
+│   └── ├── requirements.txt  # 依赖包
+│       └── manage.py  # 主模板文件
+├── frontend  # 前端项目主目录
+│   ├── public  # 
+│   ├── src  # 页面
+│   ├── package.json  # 前端依赖包
+│   └── .gitgnore    #  
+└── README.md 
+```
