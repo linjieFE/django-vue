@@ -54,6 +54,7 @@ cd backend
       'blog',
     ]
   ```
+  5. 添加 `router`
 * 设置 跨域 cors headers
 
 # 前端 
