@@ -19,7 +19,7 @@ from rest_framework import routers
 from blog.views import BlogViewSet
 
 router = routers.DefaultRouter()
-router.register('blog/', BlogViewSet)
+router.register('blog', BlogViewSet)
 
 urlpatterns = [
     path('api/', include(router.urls)),
