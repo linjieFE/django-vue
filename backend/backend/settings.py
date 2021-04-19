@@ -56,6 +56,8 @@ MIDDLEWARE = [
 
 ROOT_URLCONF = 'backend.urls'
 
+CORS_ORIGIN_ALLOW_ALL = True # allow all site request 允许所有站点请求
+
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
