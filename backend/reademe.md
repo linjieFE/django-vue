@@ -1,0 +1,40 @@
+# django-vue 前后端分离
+  -  以blog为例CRUD
+## 技术栈
+ * django
+ * django rest framework
+ * django cors headers
+##  前端 
+ * vue
+  
+# 后端 步骤
+* step1 初始化项目
+ ```bash
+ django-admin startproject backend
+ ```
+* step 2
+```bash
+cd backend
+```
+* step 3
+```bash
+ python manage.py runserver
+```
+* step4 刷新浏览器
+
+```bash
+ django-admin startapp blog
+```
+* 添加blog的Model，并添加一些初始数据
+    1.修改  `blog/models.py`
+    2.创建 model
+* 使用 restframework 来添加 serializer, viwewset,urls
+* 设置 跨域 cors headers
+
+# 前端 
+* vue cli
+* 修改核心组件
+* 添加 axios http 请求组件
+* 添加 请求后组代码
+
+
