@@ -92,11 +92,10 @@ cd backend
   - [fontwasome 字体美化库](https://fontawesome.dashgame.com/)
 * 添加 axios http 请求组件
  - `npm install axios --save`
-    ```
-    运行到这时的时候django 控制台抛了一个错 `cannot import name 'six' from 'django.utils'`
-     我在这时 增加了`requirements.txt` 并运行`pip3 install -r requirements.txt` 把django版本降低到`Django==2.1.4`
-    ```
-   [解决方案参考文献](https://stackoverflow.com/questions/59193514/importerror-cannot-import-name-six-from-django-utils)
+ *运行到这时的时候django 控制台抛了一个错 `cannot import name 'six' from 'django.utils'`
+     我在这时 增加了`requirements.txt` 并运行`pip3 install -r requirements.txt` 把django版本降低到`Django==2.1.4`*
+     
+  - [解决方案参考文献](https://stackoverflow.com/questions/59193514/importerror-cannot-import-name-six-from-django-utils)
 
 * 添加 请求后端代码
 ## Root Folder Structure(具体的文件目录)
